@@ -5,7 +5,7 @@ export default class ChatScreen extends React.PureComponent {
   render() {
     return(<div>
       <Menu />
-    <p> test </p>
+    <p> chatscreen </p>
   </div>
     )
   }
