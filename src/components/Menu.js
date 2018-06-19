@@ -1,11 +1,18 @@
 import * as React from 'react'
 import './Menu.css'
 import { connect } from 'react-redux'
-import { newUser } from '../actions/users'
+import { newUser, newHobby, changeUser } from '../actions/users'
 import { Link } from 'react-router-dom'
 
 
 class Menu extends React.PureComponent {
+
+  componentDidMount() {
+    this.props.newUser('alex', 'female', 28, 'amsterdam', 'sexy girl') //adding new user
+    this.props.newUser('jelle', 'male', 32, 'haarlem', 'batman fanboy') //adding new user
+    this.props.changeUser('aLpEr') //changing the active user. should be linked to login page-logic
+  }
+
   render() {
     return(
       <div>
@@ -20,7 +27,7 @@ class Menu extends React.PureComponent {
           <Link to="/Profile">Profile</Link>
          </li>
       </ul>
-      {/* { this.props.users.map(user => <p>{user.userName}</p>)} */}
+      {/* { this.props.users.map(user => <p>{user.userName}</p>)} we might need this for displaying other people's profiles*/}
     </div>
     )
   }
@@ -32,4 +39,4 @@ const mapStateToProps = function (state) {
   }
 }
 
-export default connect(mapStateToProps, { newUser })(Menu)
+export default connect(mapStateToProps, { newUser, newHobby, changeUser })(Menu)
