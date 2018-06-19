@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import './App.css';
 import DiscoverScreen from './components/DiscoverScreen'
@@ -11,6 +12,7 @@ class App extends Component {
     return (
     
       <div className="App">
+
 
         <Route path="/Discover" component={DiscoverScreen} />
         <Route path="/Profile" component={ProfileScreen} />
