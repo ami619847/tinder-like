@@ -1,12 +1,23 @@
 export const NEW_USER = 'NEW_USER'
+export const NEW_HOBBY = 'NEW_HOBBY'
 
-export function newUser(name, location, shortDescription, typeHobby, experienceHobby, userType) {
+export function newUser(name, gender, age, location, shortDescription) {
   return {
     type: NEW_USER,
     payload: {
       userName: name,
+      userGender: gender,
+      userAge: age,
       userLocation: location,
-      userShortDescription: shortDescription,
+      userShortDescription: shortDescription
+    }
+  }
+}
+
+export function newHobby(typeHobby, experienceHobby, userType) {
+  return {
+    type: NEW_HOBBY,
+    payload: {
       userHobby: [{
         typeHobby: typeHobby,
         experienceHobby: experienceHobby, //radiobutton with 3 choices: beginner, intermediate, experienced
@@ -14,4 +25,13 @@ export function newUser(name, location, shortDescription, typeHobby, experienceH
       }]
     }
   }
+
 }
+
+//PRIORITY
+//availability
+
+//ACCOUNT GENERATION (FOR FUTURE IMPLEMENTATION)
+//firstname
+//surname
+//email address
