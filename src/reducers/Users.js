@@ -1,77 +1,24 @@
-import { NEW_USER } from '../actions/Users'
+import { NEW_USER } from '../actions/users'
+import userData from '../data/userData'
 
-const initialState = [
-    {
-      userId: 0,
-      userName: "Rick",
-      userGender: "male",
-      userAge: "35",
-      userLocation: "utrecht",
-      userShortDescription: "loves hiking",
-      userHobby: [
-        {
-          typeHobby: "hiking",
-          experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
-          userType: "practice" //radiobutton with 3 choices: teach, learn, practice
-        },
-        {
-          typeHobby: "geography",
-          experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
-          userType: "teach" //radiobutton with 3 choices: teach, learn, practice
-        }],
-        userMatches: [{
-          otherUserId: 124,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        },
-        {
-          otherUserId: 2,
-          matches: "yes" // 3 choices: yes, no, not yet
-        }
-      ]
-    },
-    {
-      userId: 1,
-      userName: "Alper",
-      userGender: "male",
-      userAge: "35",
-      userLocation: "amstelveen",
-      userShortDescription: "djing",
-      userHobby: [{
-        typeHobby: "djing",
-        experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
-        userType: "teach" //radiobutton with 3 choices: teach, learn, practice
-      }],
-      userMatches: [{
-        otherUserId: 12423,
-        matches: "not yet" // 3 choices: yes, no, not yet
-      }]
-    },
-    {
-      userId: 2,
-      userName: "Arjen",
-      userGender: "male",
-      userAge: "35",
-      userLocation: "leiden",
-      userShortDescription: "game development",
-      userHobby: [{
-        typeHobby: "geography",
-        experienceHobby: "beginner", //radiobutton with 3 choices: beginner, intermediate, experienced
-        userType: "learn" //radiobutton with 3 choices: teach, learn, practice
-      }],
-      userMatches: [{
-        otherUserId: 0,
-        matches: "yes" // 3 choices: yes, no, not yet
-      }]
-    },
-]
+
+const initialCurrentUserId = 0
+
+const initialState = {
+  currentUserId: initialCurrentUserId,
+  userData: userData,
+  currentUser: userData.find(user => user.userId === initialCurrentUserId)
+}
+
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
   case "NEW_USER":
-    return
-      [...state,
+    return {
+      ...state,
+      userData: [...state.userData,
         {
-          userId: state[state.length - 1].userId + 1,//lastuserId +1,
+          userId: state.userData[state.userData.length - 1].userId + 1,//lastuserId +1,
           userName: action.payload.userName,
           userGender: action.payload.userGender,
           userAge: action.payload.userAge,
@@ -82,13 +29,9 @@ const reducer = (state = initialState, action = {}) => {
             experienceHobby: action.payload.experienceHobby, //radiobutton with 3 choices: beginner, intermediate, experienced
             userType: action.payload.userType //radiobutton with 3 choices: teach, learn, practice
           }]
-          // ,
-          // userMatches: [{
-          //   otherUserId: // all other users,
-          //   matches: // init state = net yet
-          // }]
         }
       ]
+    }
   default:
     return state
   }

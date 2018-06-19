@@ -1,4 +1,4 @@
-import { NEW_HOBBY } from '../actions/Users'
+import { NEW_HOBBY } from '../actions/users'
 
 const initialState = ...state
 

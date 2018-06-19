@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { newUser, newHobby } from '../actions/Users'
+import { newUser, newHobby } from '../actions/users'
 
 class Test extends React.PureComponent {
 
