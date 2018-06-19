@@ -60,6 +60,24 @@ const userData = [
           otherUserId: 0,
           matches: "yes" // 3 choices: yes, no, not yet
         }]
-  }]
+      },
+      {
+        userId: 3,
+        userName: "Arjuna",
+        userGender: "female",
+        userAge: "30",
+        userLocation: "haarlem",
+        userShortDescription: "architectural design",
+        userHobby: [{
+          typeHobby: "design",
+          experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
+          userType: "teach" //radiobutton with 3 choices: teach, learn, practice
+        }],
+        userMatches: [{
+          otherUserId: 274,
+          matches: "not yet" // 3 choices: yes, no, not yet
+        }]
+      }
+]
 
-  export default userData
+export default userData

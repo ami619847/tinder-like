@@ -19,8 +19,6 @@ class Menu extends React.PureComponent {
 }
 
 const mapStateToProps = function (state) {
-  //console.log(state.Users.filter(user => user.userId===2))
-  console.log(state)
   return {
     users: state.users,
   }

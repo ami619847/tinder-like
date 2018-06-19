@@ -1,15 +1,13 @@
 import { NEW_USER } from '../actions/users'
 import userData from '../data/userData'
 
-
-const initialCurrentUserId = 0
+const initialCurrentUserId = 3
 
 const initialState = {
   currentUserId: initialCurrentUserId,
   userData: userData,
   currentUser: userData.find(user => user.userId === initialCurrentUserId)
 }
-
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
@@ -31,6 +29,12 @@ const reducer = (state = initialState, action = {}) => {
           }]
         }
       ]
+    }
+  case "CHANGE_USER":
+    return {
+      ...state,
+      currentUserId: userData.find(user => user.userName === action.payload.userName).userId,
+      currentUser: userData.find(user => user.userName === action.payload.userName)
     }
   default:
     return state
