@@ -1,7 +1,11 @@
+import { NEW_USER } from '../actions/Users'
+
 const initialState = [
     {
       userId: 0,
       userName: "Rick",
+      userGender: "male",
+      userAge: "35",
       userLocation: "utrecht",
       userShortDescription: "loves hiking",
       userHobby: [
@@ -28,6 +32,8 @@ const initialState = [
     {
       userId: 1,
       userName: "Alper",
+      userGender: "male",
+      userAge: "35",
       userLocation: "amstelveen",
       userShortDescription: "djing",
       userHobby: [{
@@ -43,6 +49,8 @@ const initialState = [
     {
       userId: 2,
       userName: "Arjen",
+      userGender: "male",
+      userAge: "35",
       userLocation: "leiden",
       userShortDescription: "game development",
       userHobby: [{
@@ -61,7 +69,26 @@ const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
   case "NEW_USER":
     return
-      [...state,action.payload]
+      [...state,
+        {
+          userId: state[state.length - 1].userId + 1,//lastuserId +1,
+          userName: action.payload.userName,
+          userGender: action.payload.userGender,
+          userAge: action.payload.userAge,
+          userLocation: action.payload.userLocation,
+          userShortDescription: action.payload.userShortDescription,
+          userHobby: [{
+            typeHobby: action.payload.typeHobby,
+            experienceHobby: action.payload.experienceHobby, //radiobutton with 3 choices: beginner, intermediate, experienced
+            userType: action.payload.userType //radiobutton with 3 choices: teach, learn, practice
+          }]
+          // ,
+          // userMatches: [{
+          //   otherUserId: // all other users,
+          //   matches: // init state = net yet
+          // }]
+        }
+      ]
   default:
     return state
   }
