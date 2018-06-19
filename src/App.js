@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import ChatScreen from './components/ChatScreen'
+import { Route } from 'react-router-dom';
+import Mainscreen from './components/mainscreen/Mainscreen';
+import Profilescreen from './components/Profilescreen';
+
+//import ChatScreen from './components/ChatScreen'
 import './App.css';
-import Test from './components/Test' //just to test if the actions/reducers work
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ChatScreen />
-
-
+          <Route exact path="/" component={ Mainscreen } />
+          <Route exact path="/profile" component={ Profilescreen } />
       </div>
     );
   }
