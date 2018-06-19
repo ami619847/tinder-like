@@ -1,11 +1,11 @@
 import * as React from 'react'
 import Menu from './Menu'
 
-export default class Name extends React.PureComponent {
+export default class ProfileScreen extends React.PureComponent {
   render() {
     return(<div>
       <Menu />
-    <p> test </p>
+    <p> Profile </p>
   </div>
     )
   }
