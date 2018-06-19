@@ -1,3 +1,5 @@
+import { NEW_USER } from '../actions/Users'
+
 const initialState = [
     {
       userId: 0,
@@ -61,7 +63,24 @@ const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
   case "NEW_USER":
     return
-      [...state,action.payload]
+      [...state,
+        {
+          userId: state[state.length - 1].userId + 1,//lastuserId +1,
+          userName: action.payload.userName,
+          userLocation: action.payload.userLocation,
+          userShortDescription: action.payload.userShortDescription,
+          userHobby: [{
+            typeHobby: action.payload.typeHobby,
+            experienceHobby: action.payload.experienceHobby, //radiobutton with 3 choices: beginner, intermediate, experienced
+            userType: action.payload.userType //radiobutton with 3 choices: teach, learn, practice
+          }]
+          // ,
+          // userMatches: [{
+          //   otherUserId: // all other users,
+          //   matches: // init state = net yet
+          // }]
+        }
+      ]
   default:
     return state
   }

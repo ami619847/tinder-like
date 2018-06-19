@@ -1,9 +1,27 @@
 import * as React from 'react'
+import { connect } from 'react-redux'
+import { newUser } from '../actions/Users'
 
-export default class Test extends React.PureComponent {
+class Test extends React.PureComponent {
 
+  componentDidMount() {
+    return newUser("dada", "amsterdam", "sexy boy", "music", "experienced", "teacher")
+  }
 
   render() {
-    return (<p>'hello world'</p>)
+    return (
+      <div>
+        <p>hello world</p>
+      </div>
+    )
   }
 }
+
+const mapStateToProps = function (state) {
+  console.log(state)
+  return {
+    users: state.users
+  }
+}
+
+export default connect(mapStateToProps, { newUser })(Test)
