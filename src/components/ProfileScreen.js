@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { PureComponent } from 'react';
 import Menu from './Menu'
 
 export default class ProfileScreen extends React.PureComponent {
@@ -6,7 +6,8 @@ export default class ProfileScreen extends React.PureComponent {
     return(<div>
       <Menu />
     <p> Profile </p>
-  </div>
+    </div>
+
     )
   }
 }
