@@ -1,4 +1,4 @@
-import { NEW_USER, NEW_HOBBY } from '../actions/Users'
+import { NEW_USER } from '../actions/Users'
 
 const initialState = [
     {

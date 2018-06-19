@@ -1,27 +1,25 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { newUser } from '../actions/Users'
+import { newUser, newHobby } from '../actions/Users'
 
 class Test extends React.PureComponent {
-
-  componentDidMount() {
-    return newUser("dada", "amsterdam", "sexy boy", "music", "experienced", "teacher")
-  }
 
   render() {
     return (
       <div>
         <p>hello world</p>
+        <p>{this.props.users}</p>
       </div>
     )
   }
 }
 
 const mapStateToProps = function (state) {
+  //console.log(state.Users.filter(user => user.userId===2))
   console.log(state)
   return {
-    users: state.users
+    users: state.users,
   }
 }
 
-export default connect(mapStateToProps, { newUser })(Test)
+export default connect(mapStateToProps, { newUser, newHobby })(Test)
