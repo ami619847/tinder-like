@@ -27,7 +27,7 @@ class Menu extends React.PureComponent {
           <Link to="/Profile">Profile</Link>
          </li>
       </ul>
-      {/* { this.props.users.map(user => <p>{user.userName}</p>)} we might need this for displaying other people's profiles*/}
+      {/* { this.props.users.map(user => <p>{user.userName}</p>)} */}
     </div>
     )
   }
@@ -35,7 +35,7 @@ class Menu extends React.PureComponent {
 
 const mapStateToProps = function (state) {
   return {
-    users: state.users,
+    users: state.users.userData,
   }
 }
 
