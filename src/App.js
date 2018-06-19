@@ -1,16 +1,24 @@
+
 import React, { Component } from 'react';
-import ChatScreen from './components/ChatScreen'
 import './App.css';
-import Test from './components/Test'
+import DiscoverScreen from './components/DiscoverScreen'
+import ProfileScreen from './components/ProfileScreen'
+import ChatScreen from './components/ChatScreen'
+import Mainscreen from './components/mainscreen/Mainscreen'
+import Menu from './components/Menu'
+import { Router, Route } from 'react-router';
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <ChatScreen />
-        <Test />
 
+      <div className="App">
+
+        <Route exact path="/" component={Mainscreen} />
+        <Route exact path="/Discover" component={DiscoverScreen} />
+        <Route exact path="/Profile" component={ProfileScreen} />
+        <Route exact path="/Chat" component={ChatScreen} />
 
       </div>
     );
