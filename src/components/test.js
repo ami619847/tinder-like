@@ -7,9 +7,8 @@ class Test extends React.PureComponent {
   componentDidMount() {
     this.props.newUser('alex', 'female', 28, 'amsterdam', 'sexy girl')
     this.props.newUser('jelle', 'male', 32, 'haarlem', 'batman fanboy')
-    this.props.changeUser('Arjen')
+    this.props.changeUser('arJen')
   }
-
 
   render() {
     return (

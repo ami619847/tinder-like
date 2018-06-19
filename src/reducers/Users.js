@@ -1,7 +1,7 @@
 import { NEW_USER } from '../actions/users'
 import userData from '../data/userData'
 
-const initialCurrentUserId = 3
+const initialCurrentUserId = -1
 
 const initialState = {
   currentUserId: initialCurrentUserId,
@@ -33,12 +33,16 @@ const reducer = (state = initialState, action = {}) => {
   case "CHANGE_USER":
     return {
       ...state,
-      currentUserId: userData.find(user => user.userName === action.payload.userName).userId,
-      currentUser: userData.find(user => user.userName === action.payload.userName)
+      currentUserId: userData.find(user => user.userName === capitalizeFirstLetter(action.payload.userName)).userId,
+      currentUser: userData.find(user => user.userName === capitalizeFirstLetter(action.payload.userName))
     }
   default:
     return state
   }
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.toLowerCase().slice(1);
 }
 
 export default reducer
