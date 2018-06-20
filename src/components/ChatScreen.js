@@ -1,7 +1,9 @@
 import * as React from 'react'
 import Menu from './Menu'
+import { connect } from 'react-redux'
 
-export default class ChatScreen extends React.PureComponent {
+
+class ChatScreen extends React.PureComponent {
   render() {
     return(<div>
       <Menu />
@@ -10,3 +12,11 @@ export default class ChatScreen extends React.PureComponent {
     )
   }
 }
+const mapStateToProps = function (state) {
+  return {
+    talker: state.users.userData[1].userName,
+    me: state.users.userData[2].userName,
+  }
+}
+
+export default connect(mapStateToProps)(ChatScreen)
