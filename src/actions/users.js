@@ -1,5 +1,6 @@
 export const NEW_USER = 'NEW_USER'
 export const NEW_HOBBY = 'NEW_HOBBY'
+export const CHANGE_USER = 'CHANGE_USER'
 
 export function newUser(name, gender, age, location, shortDescription) {
   return {
@@ -25,7 +26,15 @@ export function newHobby(typeHobby, experienceHobby, userType) {
       }]
     }
   }
+}
 
+export function changeUser(name) {
+  return {
+    type: CHANGE_USER,
+    payload: {
+      userName: name
+    }
+  }
 }
 
 //PRIORITY
