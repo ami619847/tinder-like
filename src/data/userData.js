@@ -10,16 +10,12 @@ const userData = [
             typeHobby: "soccer",
             experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
             userType: "practice" //radiobutton with 3 choices: teach, learn, practice
-          },
-          userMatches: [{
-            otherUserId: 124,
-            matches: "not yet" // 3 choices: yes, no, not yet
-          },
-          {
-            otherUserId: 2,
-            matches: "yes" // 3 choices: yes, no, not yet
-          }
-        ],
+        },
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -34,10 +30,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "teach" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 12423,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=adult-attractive-beautiful-415829.jpg&fm=jpg"
       },
       {
@@ -52,10 +49,11 @@ const userData = [
           experienceHobby: "beginner", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "learn" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 0,
-          matches: "yes" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?cs=srgb&dl=adult-beach-beard-736716.jpg&fm=jpg"
       },
       {
@@ -70,10 +68,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "teach" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?cs=srgb&dl=adolescence-attractive-beautiful-573299.jpg&fm=jpg"
       },
       {
@@ -88,10 +87,11 @@ const userData = [
           experienceHobby: "intermediate", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "learn" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?cs=srgb&dl=black-and-white-fun-happy-91227.jpg&fm=jpg"
       },
       {
@@ -106,10 +106,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "practice" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/705821/pexels-photo-705821.jpeg?cs=srgb&dl=beautiful-beautiful-girl-brunette-705821.jpg&fm=jpg"
       },
       {
@@ -124,10 +125,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "learn" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -142,10 +144,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "teach" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -160,10 +163,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "learn" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -178,10 +182,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "teach" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -196,10 +201,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "learn" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -214,10 +220,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "learn" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/713312/pexels-photo-713312.jpeg?cs=srgb&dl=beautiful-blur-carefree-713312.jpg&fm=jpg"
       },
       {
@@ -232,10 +239,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "practice" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -250,10 +258,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "learn" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -268,10 +277,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "practice" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -286,10 +296,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "learn" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -304,10 +315,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "practice" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -322,10 +334,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "teach" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -340,10 +353,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "teach" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -358,10 +372,11 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "learn" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       },
       {
@@ -376,34 +391,16 @@ const userData = [
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
           userType: "practice" //radiobutton with 3 choices: teach, learn, practice
         },
-        userMatches: [{
-          otherUserId: 274,
-          matches: "not yet" // 3 choices: yes, no, not yet
-        }],
+        userMatches: {
+          allMatches: [],//refs to userIds
+          likedMatches: [],//refs to
+          dislikedMatches: []
+        },
         userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
       }
 
 ]
 
 
-const currentUserId = 2
-const currentUser = userData.find(user => user.userId === currentUserId)
-
-const usersWithSameHobby = userData.filter(user => user.userId !== currentUserId && user.userHobby.typeHobby === currentUser.userHobby.typeHobby)
-
-//console.log(usersWithSameHobby)//doesn't work yet...
-
-//userWithSameHobby.filter(user ) add the if statement to this filter somehow
-const userMatches = () => {
-if (currentUser.userHobby.userType === 'practice')
-  return usersWithSameHobby.filter(user => user.userHobby.userType === 'practice')
-if (currentUser.userHobby.userType === 'learn')
-  return usersWithSameHobby.filter(user => user.userHobby.userType === 'teach')
-if (currentUser.userHobby.userType === 'teach')
-  return usersWithSameHobby.filter(user => user.userHobby.userType === 'learn')
-else return 'No matches found...'
-}
-
-//console.log(userMatches())
 
 export default userData
