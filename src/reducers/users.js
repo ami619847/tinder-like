@@ -1,12 +1,28 @@
 import { NEW_USER } from '../actions/users'
+import { FIND_MATCHES } from '../actions/matches'
+
 import userData from '../data/userData'
 
-const initialCurrentUserId = -1
+const initialCurrentUserId = 0
 
 const initialState = {
   currentUserId: initialCurrentUserId,
   userData: userData,
   currentUser: userData.find(user => user.userId === initialCurrentUserId)
+}
+
+const getUsersWithSameHobby = (allUsers, currentUser) => {
+  return allUsers.filter(user => user.userId !== currentUser.userId && user.userHobby.typeHobby === currentUser.userHobby.typeHobby)
+}
+
+const getMatches = (usersWithSameHobby, currentUser) => {
+  if (currentUser.userHobby.userType === 'practice')
+    return usersWithSameHobby.filter(user => user.userHobby.userType === 'practice')
+  if (currentUser.userHobby.userType === 'learn')
+    return usersWithSameHobby.filter(user => user.userHobby.userType === 'teach')
+  if (currentUser.userHobby.userType === 'teach')
+    return usersWithSameHobby.filter(user => user.userHobby.userType === 'learn')
+  else return 'No matches found...'
 }
 
 const reducer = (state = initialState, action = {}) => {
@@ -36,6 +52,23 @@ const reducer = (state = initialState, action = {}) => {
       ...state,
       currentUserId: userData.find(user => user.userName === capitalizeFirstLetter(action.payload.userName)).userId,
       currentUser: userData.find(user => user.userName === capitalizeFirstLetter(action.payload.userName))
+    }
+  case "FIND_MATCHES":
+    const allMatches = getMatches(getUsersWithSameHobby(state.userData, state.currentUser), state.currentUser)
+    const userDataWithUpdatedMatches = state.userData.map(user => {
+      if(user.userId === state.currentUserId){
+        user = {
+          ...user,
+          userMatches: {
+            allMatches
+          }
+        }
+      }
+      return user
+    })
+    return {
+      ...state,
+      userData: userDataWithUpdatedMatches
     }
   default:
     return state
