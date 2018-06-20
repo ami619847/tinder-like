@@ -19,8 +19,7 @@ const userData = [
             otherUserId: 2,
             matches: "yes" // 3 choices: yes, no, not yet
           }
-        ],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        ]
       },
       {
         userId: 1,
@@ -37,8 +36,7 @@ const userData = [
         userMatches: [{
           otherUserId: 12423,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=adult-attractive-beautiful-415829.jpg&fm=jpg"
+        }]
       },
       {
         userId: 2,
@@ -55,8 +53,7 @@ const userData = [
         userMatches: [{
           otherUserId: 0,
           matches: "yes" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?cs=srgb&dl=adult-beach-beard-736716.jpg&fm=jpg"
+        }]
       },
       {
         userId: 3,
@@ -73,8 +70,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?cs=srgb&dl=adolescence-attractive-beautiful-573299.jpg&fm=jpg"
+        }]
       },
       {
         userId: 4,
@@ -91,8 +87,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?cs=srgb&dl=black-and-white-fun-happy-91227.jpg&fm=jpg"
+        }]
       },
       {
         userId: 5,
@@ -109,8 +104,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/705821/pexels-photo-705821.jpeg?cs=srgb&dl=beautiful-beautiful-girl-brunette-705821.jpg&fm=jpg"
+        }]
       },
       {
         userId: 6,
@@ -127,8 +121,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 7,
@@ -145,8 +138,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 8,
@@ -163,8 +155,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 9,
@@ -181,8 +172,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 10,
@@ -199,8 +189,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 11,
@@ -217,8 +206,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/713312/pexels-photo-713312.jpeg?cs=srgb&dl=beautiful-blur-carefree-713312.jpg&fm=jpg"
+        }]
       },
       {
         userId: 12,
@@ -235,8 +223,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 13,
@@ -253,8 +240,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 14,
@@ -271,8 +257,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 15,
@@ -289,8 +274,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 16,
@@ -307,8 +291,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 17,
@@ -325,8 +308,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 18,
@@ -343,8 +325,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 19,
@@ -361,8 +342,7 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
+        }]
       },
       {
         userId: 20,
@@ -379,9 +359,8 @@ const userData = [
         userMatches: [{
           otherUserId: 274,
           matches: "not yet" // 3 choices: yes, no, not yet
-        }],
-        userPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=face-facial-hair-fine-looking-614810.jpg&fm=jpg"
-      }
+        }]
+      },
 
 ]
 
@@ -400,10 +379,8 @@ if (currentUser.userHobby.userType === 'practice')
 if (currentUser.userHobby.userType === 'learn')
   return usersWithSameHobby.filter(user => user.userHobby.userType === 'teach')
 if (currentUser.userHobby.userType === 'teach')
-  return usersWithSameHobby.filter(user => user.userHobby.userType === 'learn')
+  return userWithSameHobby.filter(user => user.userHobby.userType === 'learn')
 else return 'No matches found...'
 }
 
-//console.log(userMatches())
-
-export default userData
+console.log(userMatches())
