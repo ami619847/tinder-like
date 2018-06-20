@@ -107,7 +107,12 @@ const reducer = (state = initialState, action = {}) => {
     })
     return {
       ...state,
-      userData: userDataWithNewLikes
+      userData: userDataWithNewLikes,
+      currentUser: {...state.currentUser,
+        userMatches: {...state.currentUser.userMatches,
+          likedMatches: [...state.currentUser.userMatches.likedMatches, action.payload]
+        }
+      }
     }
     case "DISLIKE_IT":
       const userDataWithNewDislikes = state.userData.map(user => {
@@ -123,7 +128,12 @@ const reducer = (state = initialState, action = {}) => {
       })
       return {
         ...state,
-        userData: userDataWithNewDislikes
+        userData: userDataWithNewDislikes,
+        currentUser: {...state.currentUser,
+          userMatches: {...state.currentUser.userMatches,
+            dislikedMatches: [...state.currentUser.userMatches.dislikedMatches, action.payload]
+          }
+        }
       }
   default:
     return state
