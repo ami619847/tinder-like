@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
 import { newHobby } from '../actions/users'
+import { withRouter } from 'react-router-dom'
 
 class HobbyForm extends PureComponent {
   handleChange = (event) => {
@@ -14,18 +15,8 @@ class HobbyForm extends PureComponent {
    const hobby = this.state.typeHobby
    const xp = this.state.experienceHobby
    const type = this.state.userType
-    //console.log('state hobby', this.state.typeHobby)
-    //console.log('state xpHobby', this.state.experienceHobby)
-    //console.log('state userType', this.state.userType)
-    //console.log(hobby, xp, type)
    this.props.newHobby(hobby, xp, type)
-
-   // if () {
-   //   this.props.newHobby({
-   //     typeHobby: this.state.typeHobby,
-   //     experienceHobby: this.state.experienceHobby,
-   //     userType: this.state.userType
-   //   })
+   this.props.history.push('./discover')
   }
 
   render() {
@@ -72,4 +63,4 @@ const mapStateToProps = function (state) {
 }
 const mapDispatchToProps = { newHobby }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HobbyForm)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HobbyForm))

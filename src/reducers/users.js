@@ -81,9 +81,9 @@ const reducer = (state = initialState, action = {}) => {
         user = {
           ...user,
           userHobby: {
-            typeHobby: action.payload.typeHobby,
-            experienceHobby: action.payload.experienceHobby,
-            userType: action.payload.userType
+            typeHobby: action.payload.userHobby.typeHobby,
+            experienceHobby: action.payload.userHobby.experienceHobby,
+            userType: action.payload.userHobby.userType
           }
         }
       }

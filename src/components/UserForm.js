@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
-import { newUser } from '../actions/users'
+import { newUser, changeUser } from '../actions/users'
 
 class UserForm extends PureComponent {
   handleChange = (event) => {
@@ -16,17 +16,7 @@ class UserForm extends PureComponent {
    const age = this.state.age
    const location = this.state.location
    const description = this.state.shortDescription
-
    this.props.newUser(name, gender, age, location, description)
-
-   // if () {
-   //   this.props.newUser({
-   //     name: this.state.userName,
-   //     gender: this.state.userGender,
-   //     age: this.state.userAge,
-   //     location: this.state.userLocation,
-   //     shortDescription: this.state.userShortDescription
-   //   })
   }
 
   render() {
@@ -73,6 +63,6 @@ const mapStateToProps = function (state) {
 
   }
 }
-const mapDispatchToProps = { newUser }
+const mapDispatchToProps = { newUser, changeUser }
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserForm)
