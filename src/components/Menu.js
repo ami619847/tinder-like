@@ -29,7 +29,7 @@ class Menu extends React.PureComponent {
           <Link to="/Chat">Message</Link>
         </li>
         <li>
-          <Link to="/Profile">Profile</Link>
+          <Link to="/cProfile">Profile</Link>
          </li>
       </ul>
       {/* { this.props.users.map(user => <p>{user.userName}</p>)} */}
