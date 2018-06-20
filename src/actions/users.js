@@ -19,11 +19,11 @@ export function newHobby(typeHobby, experienceHobby, userType) {
   return {
     type: NEW_HOBBY,
     payload: {
-      userHobby: [{
+      userHobby: {
         typeHobby: typeHobby,
-        experienceHobby: experienceHobby, //radiobutton with 3 choices: beginner, intermediate, experienced
-        userType: userType //radiobutton with 3 choices: teach, learn, practice
-      }]
+        experienceHobby: experienceHobby,
+        userType: userType
+      }
     }
   }
 }
