@@ -7,7 +7,7 @@ export default class RegisterButton extends PureComponent {
     return (
       <Link to="/profile">
         <button className="register-button" onClick = {this.props.onClick}>
-          Register
+          Register new user
         </button>
       </Link>
     )

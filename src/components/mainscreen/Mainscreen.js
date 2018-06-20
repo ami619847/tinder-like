@@ -3,6 +3,7 @@ import UsernameForm from './UsernameForm';
 import PasswordForm from './PasswordForm';
 import LoginButton from './LoginButton';
 import RegisterButton from './RegisterButton';
+import { changeUser } from '../../actions/users'
 
 export default class Mainscreen extends PureComponent{
 
@@ -16,7 +17,8 @@ export default class Mainscreen extends PureComponent{
         <UsernameForm />
         <PasswordForm />
         <br/>
-        <LoginButton />
+        {//<LoginButton />
+        }
         <RegisterButton />
       </div>
     )
