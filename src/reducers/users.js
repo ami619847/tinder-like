@@ -1,5 +1,5 @@
 import { NEW_USER } from '../actions/users'
-import { FIND_MATCHES } from '../actions/matches'
+import { FIND_MATCHES, LIKE_IT, DISLIKE_IT } from '../actions/matches'
 
 import userData from '../data/userData'
 
@@ -93,11 +93,41 @@ const reducer = (state = initialState, action = {}) => {
       ...state,
       userData: addNewHobby
     }
+  case "LIKE_IT":
+    const userDataWithNewLikes = state.userData.map(user => {
+      if(user.userId === state.currentUserId){
+        user = {
+          ...user,
+          userMatches: {...user.userMatches,
+            likedMatches: [...user.userMatches.likedMatches, action.payload]
+          }
+          }
+        }
+      return user
+    })
+    return {
+      ...state,
+      userData: userDataWithNewLikes
+    }
+    case "DISLIKE_IT":
+      const userDataWithNewDislikes = state.userData.map(user => {
+        if(user.userId === state.currentUserId){
+          user = {
+            ...user,
+            userMatches: {...user.userMatches,
+              dislikedMatches: [...user.userMatches.dislikedMatches, action.payload]
+            }
+            }
+          }
+        return user
+      })
+      return {
+        ...state,
+        userData: userDataWithNewDislikes
+      }
   default:
     return state
   }
 }
-
-
 
 export default reducer

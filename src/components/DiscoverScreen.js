@@ -3,6 +3,7 @@ import Menu from './Menu'
 import SwipeImage from './SwipeImage';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { likeIt, dislikeIt } from '../actions/matches'
 import './DiscoverScreen.css'
 
 class DiscoverScreen extends React.PureComponent {
@@ -30,8 +31,8 @@ class DiscoverScreen extends React.PureComponent {
                     <p></p>
                     <div><b>Hobbies: </b><p>{user.userHobby.typeHobby} , {user.userHobby.experienceHobby} , {user.userHobby.userType}</p></div>
                     </div>
-                    <button>LIKE</button>
-                    <button>DISLIKE</button>
+                    <button onClick={() => this.props.likeIt(user.userId)}>LIKE</button>
+                    <button onClick={() => this.props.dislikeIt(user.userId)}>DISLIKE</button>
                   </div>
             </div>
             )}
@@ -50,4 +51,4 @@ const mapStateToProps = function (state) {
   }
 }
 
-export default connect(mapStateToProps)(DiscoverScreen)
+export default connect(mapStateToProps, {likeIt, dislikeIt})(DiscoverScreen)
