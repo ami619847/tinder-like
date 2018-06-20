@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import './App.css';
-import DiscoverScreen from './components/DiscoverScreen'
+import DiscoverScreen from './components/DiscoverScreen';
 import ProfileScreen from './components/ProfileScreen'
 import ChatScreen from './components/ChatScreen'
 import Mainscreen from './components/mainscreen/Mainscreen'
@@ -20,8 +20,6 @@ class App extends Component {
           <Route exact path="/Discover" component={DiscoverScreen} />
           <Route exact path="/Profile" component={ProfileScreen} />
           <Route exact path="/Chat" component={ChatScreen} />
-
-
       </div>
     );
   }
