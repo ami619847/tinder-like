@@ -4,8 +4,11 @@ import { newUser, newHobby, changeUser } from '../actions/users'
 import { Link } from 'react-router-dom'
 import './DiscoverDumbComponent.css'
 
+//import SwipeImage from './SwipeImage';
+
 class DiscoverDumbComponent extends React.PureComponent {
   render() {
+    this.props.users.map(user => console.log(user))
     return(
       <div>
         { this.props.users.map(user =>
