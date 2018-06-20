@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { newUser, newHobby, changeUser } from '../actions/users'
 import { Link } from 'react-router-dom'
 import Menu from './Menu'
-import './DiscoverDumbComponent.css'
+import './DiscoverScreen.css'
 
 //import SwipeImage from './SwipeImage';
 
