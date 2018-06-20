@@ -8,7 +8,8 @@ import './DiscoverDumbComponent.css'
 
 class DiscoverDumbComponent extends React.PureComponent {
   render() {
-    this.props.users.map(user => console.log(user))
+    console.log(this.props.currentUser)
+    
     return(
       <div>
         { this.props.users.map(user =>
