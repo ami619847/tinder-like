@@ -22,11 +22,12 @@ const reducer = (state = initialState, action = {}) => {
           userAge: action.payload.userAge,
           userLocation: action.payload.userLocation,
           userShortDescription: action.payload.userShortDescription,
-          userHobby: [{
+          userHobby: {
             typeHobby: action.payload.typeHobby,
             experienceHobby: action.payload.experienceHobby, //radiobutton with 3 choices: beginner, intermediate, experienced
             userType: action.payload.userType //radiobutton with 3 choices: teach, learn, practice
-          }]
+          },
+          userPhoto: action.payload.userPhoto
         }
       ]
     }

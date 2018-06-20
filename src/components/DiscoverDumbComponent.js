@@ -11,7 +11,7 @@ class DiscoverDumbComponent extends React.PureComponent {
         { this.props.users.map(user =>
           <div key={user.userId} className="container">
             <div className="pic">
-              <img className="image" src=""/>
+              <img className="image" src={user.userPhoto}/>
             </div>
             <div className="name-box">
               <h2>{user.userName}, <span className="age"> {user.userAge}</span></h2>
@@ -21,7 +21,7 @@ class DiscoverDumbComponent extends React.PureComponent {
               <p></p>
               <div><b>Short Info: </b>{user.userShortDescription}</div>
               <p></p>
-              <div><b>Hobbies: </b>{user.userHobby.map(hobby => <p>{hobby.typeHobby} , {hobby.experienceHobby} , {hobby.userType}</p>)}</div>
+              <div><b>Hobbies: </b><p>{user.userHobby.typeHobby} , {user.userHobby.experienceHobby} , {user.userHobby.userType}</p></div>
               </div>
             </div>
         )}
