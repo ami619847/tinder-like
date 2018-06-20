@@ -11,6 +11,11 @@ const initialState = {
   currentUser: userData.find(user => user.userId === initialCurrentUserId)
 }
 
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.toLowerCase().slice(1);
+}
+
 const getUsersWithSameHobby = (allUsers, currentUser) => {
   return allUsers.filter(user => user.userId !== currentUser.userId && user.userHobby.typeHobby === currentUser.userHobby.typeHobby)
 }
@@ -70,13 +75,29 @@ const reducer = (state = initialState, action = {}) => {
       ...state,
       userData: userDataWithUpdatedMatches
     }
+  case "NEW_HOBBY":
+    const addNewHobby = state.userData.map(user => {
+      if(user.userId === state.currentUserId){
+        user = {
+          ...user,
+          userHobby: {
+            typeHobby: action.payload.userHobby.typeHobby,
+            experienceHobby: action.payload.userHobby.experienceHobby,
+            userType: action.payload.userHobby.userType
+          }
+        }
+      }
+      return user
+    })
+    return {
+      ...state,
+      userData: addNewHobby
+    }
   default:
     return state
   }
 }
 
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.toLowerCase().slice(1);
-}
+
 
 export default reducer
