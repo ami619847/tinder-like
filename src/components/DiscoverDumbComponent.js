@@ -6,6 +6,7 @@ import './DiscoverDumbComponent.css'
 
 class DiscoverDumbComponent extends React.PureComponent {
   render() {
+    this.props.users.map(user => console.log(user))
     return(
       <div>
         { this.props.users.map(user =>
