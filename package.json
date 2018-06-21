@@ -2,7 +2,7 @@
   "name": "tinder-like",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://alphabravoab.github.io/tinder-like/",
+  "homepage":"https://alphabravoab.github.io/tinder-like",
   "dependencies": {
     "browser-router": "^0.2.0",
     "gh-pages": "^1.2.0",
