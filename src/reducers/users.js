@@ -8,7 +8,7 @@ const initialCurrentUserId = 0
 const initialState = {
   currentUserId: initialCurrentUserId,
   userData: userData,
-  currentUser: userData.find(user => user.userId === initialCurrentUserId)
+  currentUser: userData.find(user => user.userId === initialCurrentUserId),
 }
 
 const makeNewUser = (state, action) => {
@@ -44,11 +44,11 @@ const getUsersWithSameHobby = (allUsers, currentUser) => {
 
 const getMatches = (usersWithSameHobby, currentUser) => {
   if (currentUser.userHobby.userType === 'practice')
-    return usersWithSameHobby.filter(user => user.userHobby.userType === 'practice')
+    return usersWithSameHobby.filter(user => user.userHobby.userType === 'practice').map(user=>user.userId)
   if (currentUser.userHobby.userType === 'learn')
-    return usersWithSameHobby.filter(user => user.userHobby.userType === 'teach')
+    return usersWithSameHobby.filter(user => user.userHobby.userType === 'teach').map(user=>user.userId)
   if (currentUser.userHobby.userType === 'teach')
-    return usersWithSameHobby.filter(user => user.userHobby.userType === 'learn')
+    return usersWithSameHobby.filter(user => user.userHobby.userType === 'learn').map(user=>user.userId)
   else return 'No matches found...'
 }
 
@@ -73,8 +73,8 @@ const reducer = (state = initialState, action = {}) => {
       if(user.userId === state.currentUserId){
         user = {
           ...user,
-          userMatches: {
-            allMatches
+          userMatches: {...user.userMatches,
+            allMatches: allMatches
           }
         }
       }
@@ -82,7 +82,12 @@ const reducer = (state = initialState, action = {}) => {
     })
     return {
       ...state,
-      userData: userDataWithUpdatedMatches
+      userData: userDataWithUpdatedMatches,
+      currentUser: {...state.currentUser,
+        userMatches: {...state.currentUser.userMatches,
+          allMatches: allMatches
+        }
+      }
     }
   case "NEW_HOBBY":
     const addNewHobby = state.userData.map(user => {
