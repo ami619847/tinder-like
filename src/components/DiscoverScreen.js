@@ -1,10 +1,12 @@
-import * as React from 'react'
-import Menu from './Menu'
+import * as React from 'react';
+import Menu from './Menu';
 import SwipeImage from './SwipeImage';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { likeIt, dislikeIt } from '../actions/matches'
-import './DiscoverScreen.css'
+import { likeIt, dislikeIt } from '../actions/matches';
+import './DiscoverScreen.css';
+import like from '../images/Like-button.png';
+import dislike from '../images/Dislike-button.png';
 
 class DiscoverScreen extends React.PureComponent {
 
@@ -17,29 +19,41 @@ class DiscoverScreen extends React.PureComponent {
           <SwipeImage className="swiping" swipeOptions={{continuous: false}}>
             { this.props.otherusers.map(user =>
             <div>
-                <div key={user.userId} className="container">
+              <div key={user.userId} className="container">
+
                   <div className="pic">
                     <img className="image" src={user.userPhoto}/>
                   </div>
                   <div className="name-box">
-                    <h2>{user.userName}, <span className="age"> {user.userAge}</span></h2>
+                    <h2>
+                      {user.userName},
+                      <span className="age">{user.userAge}</span>
+                    </h2>
                     <p>{user.userLocation}</p>
                   </div>
-                  <div className="info">
-                    <p></p>
-                    <div><b>Short Info: </b>{user.userShortDescription}</div>
-                    <p></p>
-                    <div><b>Hobbies: </b><p>{user.userHobby.typeHobby} , {user.userHobby.experienceHobby} , {user.userHobby.userType}</p></div>
-                    </div>
-                    <button onClick={() => this.props.likeIt(user.userId)}>LIKE</button>
-                    <button onClick={() => this.props.dislikeIt(user.userId)}>DISLIKE</button>
+
+                  <div className="info-hobby">
+                    {user.userHobby.typeHobby}: {user.userHobby.experienceHobby}, {user.userHobby.userType}
                   </div>
+                  <br/>
+
+                  <div className="info">
+                    <b>Short Description: </b>
+                      {user.userShortDescription}
+                  </div>
+                  <br/><br/><br/>
+
+
+                  <img src={like} alt="like-button" onClick={() => this.props.likeIt(user.userId)}/>
+
+                  <img src={dislike} alt="dislike-button" onClick={() => this.props.dislikeIt(user.userId)}/>
+
+              </div>
             </div>
             )}
           </SwipeImage>
 
         </div>
-
     )
   }
 }

@@ -12,21 +12,32 @@ class CurrentProfileScreen extends React.PureComponent {
     return(
       <div>
         <Menu />
+        <h3>Your page</h3>
+
           <div key={this.props.user.userId} className="container">
             <div className="pic">
               <img className="image" src={this.props.user.userPhoto}/>
             </div>
             <div className="name-box">
-              <h2>{this.props.user.userName}, <span className="age"> {this.props.user.userAge}</span></h2>
+              <h2>
+                {this.props.user.userName},
+                <span className="age"> {this.props.user.userAge}</span>
+              </h2>
               <p>{this.props.user.userLocation}</p>
             </div>
-            <div className="info">
-              <p></p>
-              <div><b>Short Info: </b>{this.props.user.userShortDescription}</div>
-              <p></p>
-              <div><b>Hobbies: </b><p>{this.props.user.userHobby.typeHobby} , {this.props.user.userHobby.experienceHobby} , {this.props.user.userHobby.userType}</p></div>
-              </div>
+
+            <div className="info-hobby">
+              {this.props.user.userHobby.typeHobby}: {this.props.user.userHobby.experienceHobby}, {this.props.user.userHobby.userType}
             </div>
+            <br/>
+
+            <div className="info">
+              <b>Short Description: </b>
+                {this.props.user.userShortDescription}
+            </div>
+
+            <br/><br/><br/>
+          </div>
       </div>
     )
   }

@@ -35,21 +35,22 @@ class UserForm extends PureComponent {
           </label>
           <br/>
           <label>
-            Age:
-            <input type="number" name="age" onChange={this.handleChange}/>
-          </label>
-          <br/>
-          <label>
             Location:
             <input type="text" name="location" onChange={this.handleChange}/>
           </label>
           <br/>
           <label>
-            Short Description:
-          <input type="text" rows="3" name="shortDescription" onChange={this.handleChange}/>
+            Age:
+            <input type="number" name="age" onChange={this.handleChange}/>
           </label>
           <br/>
-          <input type="submit" value="New User" />
+
+          <label>
+            Short Description:
+          <input type="text" className="shortDescription" name="shortDescription" onChange={this.handleChange}/>
+          </label>
+          <br/>
+          <input type="submit" value="Create Account" />
         </form>
 
       </div>

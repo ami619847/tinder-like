@@ -4,6 +4,7 @@ import UserImage from './UserImage';
 import UserStatisticsForm from './UserStatisticsForm';
 import UserForm from './UserForm';
 import HobbyForm from './HobbyForm';
+import './ProfileScreen.css';
 
 
 export default class ProfileScreen extends React.PureComponent {

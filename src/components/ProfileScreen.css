@@ -1,0 +1,59 @@
+.profile-image{
+  height: 55%;
+  position: relative;
+  overflow: hidden;
+}
+
+.userForm{
+  width: 420px;
+  height: 300px;
+  margin: 40px auto 0 auto; */
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+label{
+  color: #4CAF50;
+  float: left;
+}
+
+input{
+  display: block;
+  border-radius: 5px;
+  padding: 5px 40px;
+}
+
+.shortDescription{
+  display: block;
+  border-radius: 5px;
+  padding: 30px 40px;
+}
+
+input[type=submit]{
+  color: grey;
+  cursor: pointer;
+  text-align: center;
+}
+
+.select{
+  float: left;
+  display: block;
+  /* height: 50px;*/
+  /* width: 200px; */
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+
+
+.hobbyForm{
+  width: 420px;
+  height: 300px;
+  margin: 40px auto 0 auto; */
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
