@@ -7,7 +7,7 @@ export default class LoginButton extends PureComponent {
     return (
       <Link to="/discover">
         <button className="login-button" onClick = {this.props.onClick }>
-          Log In
+          LOGIN
         </button>
       </Link>
     )

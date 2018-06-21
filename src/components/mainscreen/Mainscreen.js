@@ -3,21 +3,21 @@ import UsernameForm from './UsernameForm';
 import PasswordForm from './PasswordForm';
 import LoginButton from './LoginButton';
 import RegisterButton from './RegisterButton';
+import { changeUser } from '../../actions/users';
+import './Mainscreen.css';
 
 export default class Mainscreen extends PureComponent{
 
   render() {
     return (
       <div className="mainscreen">
-        <header className="App-header">
-          <h1>LOGO</h1>
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        </header>
+        <h1>LOGO</h1>
+        {/* <img src={logo} className="mainscreen-logo" alt="logo" /> */}
         <UsernameForm />
         <PasswordForm />
         <br/>
-        <LoginButton />
         <RegisterButton />
+        <LoginButton />
       </div>
     )
   }
