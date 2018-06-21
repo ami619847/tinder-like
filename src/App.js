@@ -28,3 +28,4 @@ class App extends Component {
 }
 
 export default App;
+//too deploy just run this in your command line: yarn run deploy
