@@ -13,10 +13,14 @@ class Menu extends React.PureComponent {
      //changing the active user. should be linked to login page-logic
 
     // this.props.changeUser('rick')
+    // this.props.findMatches()
+
+    // this.props.changeUser('rick')
 
   //  this.props.changeUser('rick')
 
     this.props.findMatches()
+
     // this.props.findMatches()
 
 
