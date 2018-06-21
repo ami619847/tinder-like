@@ -29,7 +29,7 @@ class UsernameForm extends PureComponent {
             <label>
               <input
                 type="text"
-                name="username"
+                className="username"
                 onChange={this.handleChange}
                 placeholder="Username"
               />

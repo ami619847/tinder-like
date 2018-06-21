@@ -23,7 +23,7 @@ export default class PasswordForm extends PureComponent {
           <label>
             <input
               type="text"
-              name="password"
+              className="password"
               onChange={this.handleChange}
               value={this.state.password}
               placeholder="Password"

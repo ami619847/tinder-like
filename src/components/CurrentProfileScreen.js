@@ -9,8 +9,6 @@ import './DiscoverScreen.css'
 
 class CurrentProfileScreen extends React.PureComponent {
   render() {
-    console.log(this.props.currentUser)
-
     return(
       <div>
         <Menu />
@@ -29,8 +27,6 @@ class CurrentProfileScreen extends React.PureComponent {
               <div><b>Hobbies: </b><p>{this.props.user.userHobby.typeHobby} , {this.props.user.userHobby.experienceHobby} , {this.props.user.userHobby.userType}</p></div>
               </div>
             </div>
-
-
       </div>
     )
   }

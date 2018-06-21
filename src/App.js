@@ -19,8 +19,8 @@ class App extends Component {
         <BrowserRouter basename={process.env.PUBLIC_URL} />
           <Route exact path="/" component={Mainscreen} />
           <Route exact path="/Discover" component={DiscoverScreen} />
-          <Route exact path="/dadProfile" component={ProfileScreen} />
-            <Route exact path="/Profile" component={CurrentProfileScreen} />
+          <Route exact path="/Profile" component={ProfileScreen} />
+          <Route exact path="/cProfile" component={CurrentProfileScreen} />
           <Route exact path="/Chat" component={ChatScreen} />
       </div>
     );
