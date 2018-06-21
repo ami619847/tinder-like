@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux'
+import { newUser, changeUser } from '../actions/users'
 
-export default class UserForm extends PureComponent {
+class UserForm extends PureComponent {
   handleChange = (event) => {
     this.setState({
      [event.target.name]: event.target.value
@@ -9,15 +11,12 @@ export default class UserForm extends PureComponent {
 
  handleSubmit = (event) => {
    event.preventDefault()
-
-   // if () {
-   //   this.props.newUser({
-   //     name: this.state.userName,
-   //     gender: this.state.userGender,
-   //     age: this.state.userAge,
-   //     location: this.state.userLocation,
-   //     shortDescription: this.state.userShortDescription
-   //   })
+   const name = this.state.name
+   const gender = this.state.gender
+   const age = this.state.age
+   const location = this.state.location
+   const description = this.state.shortDescription
+   this.props.newUser(name, gender, age, location, description)
   }
 
   render() {
@@ -57,3 +56,13 @@ export default class UserForm extends PureComponent {
     )
   }
 }
+
+const mapStateToProps = function (state) {
+  return {
+    users: state.users.userData
+
+  }
+}
+const mapDispatchToProps = { newUser, changeUser }
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserForm)

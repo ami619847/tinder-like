@@ -11,7 +11,11 @@ class Menu extends React.PureComponent {
     //this.props.newUser('alex', 'female', 28, 'amsterdam', 'sexy girl') //adding new user
     //this.props.newUser('jelle', 'male', 32, 'haarlem', 'batman fanboy') //adding new user
      //changing the active user. should be linked to login page-logic
+
     // this.props.changeUser('rick')
+
+  //  this.props.changeUser('rick')
+
     this.props.findMatches()
     // this.props.findMatches()
 
@@ -29,7 +33,7 @@ class Menu extends React.PureComponent {
           <Link to="/Chat">Message</Link>
         </li>
         <li>
-          <Link to="/Profile">Profile</Link>
+          <Link to="/cProfile">Profile</Link>
          </li>
       </ul>
       {/* { this.props.users.map(user => <p>{user.userName}</p>)} */}
