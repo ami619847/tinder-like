@@ -8,7 +8,7 @@ const initialCurrentUserId = 0
 const initialState = {
   currentUserId: initialCurrentUserId,
   userData: userData,
-  currentUser: userData.find(user => user.userId === initialCurrentUserId)
+  currentUser: userData.find(user => user.userId === initialCurrentUserId),
 }
 
 
