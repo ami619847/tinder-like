@@ -1,8 +1,9 @@
-.mainscreen-logo {
+/* .mainscreen-logo {
   border-radius: 50%;
-}
+} */
 
 .username {
+    display: flex;
     border: 2px solid lightgrey;
     border-radius: 5px;
     background-color: white;
@@ -15,6 +16,7 @@
 }
 
 .password {
+    display: flex;
     border: 2px solid lightgrey;
     border-radius: 5px;
     background-color: white;

@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
-import Image from '../image-homer.jpg';
+import Image from '../images/image-homer.jpg';
 
 export default class UserImage extends PureComponent {
 
   render() {
     return(
       <div>
-        <img src={Image} alt={"profile-image"}/>
+        <img className="profile-image" src={Image} alt={"profile-image"}/>
         <br/>
       </div>
     )

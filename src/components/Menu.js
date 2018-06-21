@@ -3,7 +3,10 @@ import './Menu.css'
 import { connect } from 'react-redux'
 import { newUser, newHobby, changeUser } from '../actions/users'
 import { Link } from 'react-router-dom'
-import { findMatches } from '../actions/matches'
+import { findMatches } from '../actions/matches';
+import discover from '../images/Discover-button.png';
+import profile from '../images/Profile-button-highlighted.png';
+import chat from '../images/Messaging-button.png';
 
 class Menu extends React.PureComponent {
 
@@ -31,13 +34,19 @@ class Menu extends React.PureComponent {
       <div>
       <ul className= 'menu'>
         <li>
-          <Link to="/Discover">Discover</Link>
+          <Link to="/Discover">
+            <img src={discover} alt="discover-icon"/>
+          </Link>
         </li>
         <li>
-          <Link to="/Chat">Message</Link>
+          <Link to="/Chat">
+            <img src={chat} alt="chat-icon"/>
+          </Link>
         </li>
         <li>
-          <Link to="/cProfile">Profile</Link>
+          <Link to="/cProfile">
+            <img src={profile} alt="profile-icon" className="profile-icon"/>
+          </Link>
          </li>
       </ul>
       {/* { this.props.users.map(user => <p>{user.userName}</p>)} */}

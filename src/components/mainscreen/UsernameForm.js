@@ -34,6 +34,9 @@ class UsernameForm extends PureComponent {
                 placeholder="Username"
               />
             </label>
+              <button className="login-button" onClick = {this.props.onClick }>
+                LOGIN
+              </button>
           </form>
 
       </div>

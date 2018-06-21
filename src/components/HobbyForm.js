@@ -28,25 +28,30 @@ class HobbyForm extends PureComponent {
             <input type="text" name="typeHobby" onChange={this.handleChange}/>
           </label>
           <br/>
-          <label>
-            Experience:
-            <select name="experienceHobby" onChange={this.handleChange}>
-              <option value="null"></option>
-              <option value="beginner">beginner</option>
-              <option value="intermediate">intermediate</option>
-              <option value="experienced">advanced</option>
-            </select>
-          </label>
+
+            <label className="select">
+              Experience:
+              <select name="experienceHobby" onChange={this.handleChange}>
+                <option value="null"></option>
+                <option value="beginner">beginner</option>
+                <option value="intermediate">intermediate</option>
+                <option value="experienced">advanced</option>
+              </select>
+            </label>
+
           <br/>
-          <label>
-            Level:
-            <select name="userType" onChange={this.handleChange}>
-              <option value="null"></option>
-              <option value="learn">learn</option>
-              <option value="practice">practice</option>
-              <option value="teach">teach</option>
-            </select>
-          </label>
+
+            <label className="select">
+              Level:
+              <select name="userType" onChange={this.handleChange}>
+                <option value="null"></option>
+                <option value="learn">learn</option>
+                <option value="practice">practice</option>
+                <option value="teach">teach</option>
+              </select>
+            </label>
+
+
           <br/>
           <input type="submit" value="New Hobby"/>
         </form>
