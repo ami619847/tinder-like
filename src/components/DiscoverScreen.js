@@ -11,6 +11,7 @@ import dislike from '../images/Dislike-button.png';
 class DiscoverScreen extends React.PureComponent {
 
   render() {
+    console.log(this.props.currentUser)
     return(
       <div>
         <Menu />
@@ -61,7 +62,8 @@ class DiscoverScreen extends React.PureComponent {
 const mapStateToProps = function (state) {
   return {
     users: state.users.userData,
-    otherusers: state.users.userData.filter(user=>user.userId!==state.users.currentUserId && user.userHobby.typeHobby===state.users.currentUser.userHobby.typeHobby)
+    otherusers: state.users.userData.filter(user=>user.userId!==state.users.currentUserId && user.userHobby.typeHobby===state.users.currentUser.userHobby.typeHobby),
+    currentUser: state.users.userData.find(user => user.userId === state.users.currentUserId)
   }
 }
 

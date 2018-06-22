@@ -45,7 +45,7 @@ class CurrentProfileScreen extends React.PureComponent {
 
 const mapStateToProps = function (state) {
   return {
-    user: state.users.currentUser,
+    user: state.users.userData.find(user => user.userId === state.users.currentUserId),
 
   }
 }

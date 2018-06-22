@@ -11,9 +11,31 @@ const initialState = {
   currentUser: userData.find(user => user.userId === initialCurrentUserId)
 }
 
+const makeNewUser = (state, action) => {
+  return {
+    userId: state.userData[state.userData.length - 1].userId + 1,//lastuserId +1,
+    userName: action.payload.userName,
+    userGender: action.payload.userGender,
+    userAge: action.payload.userAge,
+    userLocation: action.payload.userLocation,
+    userShortDescription: action.payload.userShortDescription,
+    userHobby: {
+      typeHobby: action.payload.typeHobby,
+      experienceHobby: action.payload.experienceHobby, //radiobutton with 3 choices: beginner, intermediate, experienced
+      userType: action.payload.userType //radiobutton with 3 choices: teach, learn, practice
+    },
+    userPhoto: action.payload.userPhoto
+  }
+}
+
+// TODO: take out currentUser in this reducer and get it from userdata in places where you need it. If you have time. If not then so be it.
 
 function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.toLowerCase().slice(1);
+    return string.charAt().toUpperCase() + string.toLowerCase().slice(1);
+}
+
+const getCurrentUser = (currentUserId, users) => {
+  return users.find(user => user.userId === currentUserId)
 }
 
 const getUsersWithSameHobby = (allUsers, currentUser) => {
@@ -33,30 +55,17 @@ const getMatches = (usersWithSameHobby, currentUser) => {
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
   case "NEW_USER":
+    const newUser = makeNewUser(state, action)
     return {
-      ...state,
-      userData: [...state.userData,
-        {
-          userId: state.userData[state.userData.length - 1].userId + 1,//lastuserId +1,
-          userName: action.payload.userName,
-          userGender: action.payload.userGender,
-          userAge: action.payload.userAge,
-          userLocation: action.payload.userLocation,
-          userShortDescription: action.payload.userShortDescription,
-          userHobby: {
-            typeHobby: action.payload.typeHobby,
-            experienceHobby: action.payload.experienceHobby, //radiobutton with 3 choices: beginner, intermediate, experienced
-            userType: action.payload.userType //radiobutton with 3 choices: teach, learn, practice
-          },
-          userPhoto: action.payload.userPhoto
-        }
-      ]
+      currentUserId: newUser.userId,
+      userData: [...state.userData, newUser],
+      currentUser: newUser
     }
   case "CHANGE_USER":
     return {
       ...state,
-      currentUserId: userData.find(user => user.userName === capitalizeFirstLetter(action.payload.userName)).userId,
-      currentUser: userData.find(user => user.userName === capitalizeFirstLetter(action.payload.userName))
+      currentUserId: state.userData.find(user => user.userName === action.payload.userName).userId,
+      currentUser: state.userData.find(user => user.userName === action.payload.userName)
     }
   case "FIND_MATCHES":
     const allMatches = getMatches(getUsersWithSameHobby(state.userData, state.currentUser), state.currentUser)
