@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { newUser, newHobby, changeUser } from '../actions/users';
@@ -5,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Menu from './Menu';
 import './DiscoverScreen.css';
 import { ResponsiveEmbed } from 'react-bootstrap';
+
 
 //import SwipeImage from './SwipeImage';
 
@@ -14,7 +16,7 @@ class CurrentProfileScreen extends React.PureComponent {
       <ResponsiveEmbed>
         <div>
           <Menu />
-          <h3>YOUR ACCOUNT</h3>
+          <h3>WELCOME {this.props.user.userName}!</h3>
 
             <div key={this.props.user.userId} className="container">
               <div className="pic">
@@ -39,6 +41,7 @@ class CurrentProfileScreen extends React.PureComponent {
               </div>
 
               <br/><br/><br/>
+
             </div>
         </div>
       </ResponsiveEmbed>
@@ -48,9 +51,9 @@ class CurrentProfileScreen extends React.PureComponent {
 
 const mapStateToProps = function (state) {
   return {
-    user: state.users.currentUser,
+    user: state.users.currentUser
 
   }
 }
 
-export default connect(mapStateToProps, { newUser, newHobby, changeUser })(CurrentProfileScreen)
+export default connect(mapStateToProps)(CurrentProfileScreen)
