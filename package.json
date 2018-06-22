@@ -4,8 +4,11 @@
   "private": true,
   "homepage": "https://alphabravoab.github.io/tinder-like/",
   "dependencies": {
+    "bootstrap": "3",
     "browser-router": "^0.2.0",
     "deploy": "^1.0.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
