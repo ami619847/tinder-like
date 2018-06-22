@@ -38,10 +38,6 @@ const getCurrentUser = (currentUserId, users) => {
   return users.find(user => user.userId === currentUserId)
 }
 
-const getCurrentUser = (currentUserId, users) => {
-  return users.find(user => user.userId === currentUserId)
-}
-
 const getUsersWithSameHobby = (allUsers, currentUser) => {
   return allUsers.filter(user => user.userId !== currentUser.userId && user.userHobby.typeHobby === currentUser.userHobby.typeHobby)
 }

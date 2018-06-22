@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
 import { newHobby, changeUser } from '../actions/users'
 import { withRouter } from 'react-router-dom'
+import { findMatches } from '../actions/matches';
 
 class HobbyForm extends PureComponent {
   handleChange = (event) => {
@@ -27,6 +28,7 @@ class HobbyForm extends PureComponent {
     const findName = this.props.users.find(user => user.userId === this.props.currentUserId).userName
     //console.log('findName', findName)
     this.props.changeUser(findName)
+    this.props.findMatches()
     this.props.history.push('./discover')
   }
 
@@ -79,6 +81,6 @@ const mapStateToProps = function (state) {
 
   }
 }
-const mapDispatchToProps = { newHobby, changeUser }
+const mapDispatchToProps = { newHobby, changeUser, findMatches }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HobbyForm))
