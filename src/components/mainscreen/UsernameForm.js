@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux'
-import { changeUser } from '../../actions/users'
-import { Link } from 'react-router-dom'
-import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { changeUser } from '../../actions/users';
+import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { findMatches } from '../../actions/matches';
+import PasswordForm from './PasswordForm';
+import RegisterButton from './RegisterButton';
 
 class UsernameForm extends PureComponent {
   state = {username:''}
@@ -28,19 +30,27 @@ class UsernameForm extends PureComponent {
         <br/>
 
           <form onSubmit={this.handleSubmit.bind(this)}>
-            <label>
-              <input
-                type="text"
-                className="username"
-                onChange={this.handleChange}
-                placeholder="Username"
-              />
-            </label>
+
+            <div className="username-password">
+              <label>
+                <input
+                  type="text"
+                  className="username"
+                  onChange={this.handleChange}
+                  placeholder="Username"
+                />
+              </label>
+              <PasswordForm />
+            </div>
+
+            <div display="block" >
+              <RegisterButton />
               <button className="login-button" onClick = {this.props.onClick }>
                 LOGIN
               </button>
-          </form>
+            </div>
 
+          </form>
       </div>
     )
   }

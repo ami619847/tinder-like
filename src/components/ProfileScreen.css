@@ -1,13 +1,15 @@
 .profile-image{
-  height: 55%;
+  width: 420px;
+  height: 100;
+  margin: 40px auto 0 auto;
   position: relative;
   overflow: hidden;
 }
 
 .userForm{
   width: 420px;
-  height: 300px;
-  margin: 40px auto 0 auto; */
+  height: 100%;
+  margin: 40px auto 0 auto;
   position: relative;
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -23,6 +25,7 @@ input{
   display: block;
   border-radius: 5px;
   padding: 5px 40px;
+  width: 100%;
 }
 
 .shortDescription{
@@ -35,6 +38,7 @@ input[type=submit]{
   color: grey;
   cursor: pointer;
   text-align: center;
+  width: 82%;
 }
 
 .select{
@@ -46,11 +50,9 @@ input[type=submit]{
   border-radius: 5px;
 }
 
-
-
 .hobbyForm{
   width: 420px;
-  height: 300px;
+  height: 100%;
   margin: 40px auto 0 auto; */
   position: relative;
   border-radius: 5px;

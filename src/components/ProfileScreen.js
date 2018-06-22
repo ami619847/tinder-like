@@ -5,25 +5,28 @@ import UserStatisticsForm from './UserStatisticsForm';
 import UserForm from './UserForm';
 import HobbyForm from './HobbyForm';
 import './ProfileScreen.css';
+import { ResponsiveEmbed } from 'react-bootstrap';
 
 
 export default class ProfileScreen extends React.PureComponent {
   render() {
     return(
-      <div>
-        <Menu />
-        <h3>Create Profile</h3>
-        <main>
-          <UserImage/>
-          {//<UserStatisticsForm/>}
-}         <UserForm
-            //newUser={this.newUser}
-          />
-          <HobbyForm
-            //newHobby={this.newHobby}
-          />
-        </main>
-      </div>
+      <ResponsiveEmbed>
+        <div>
+          <Menu />
+          <h3>CREATE ACCOUNT</h3>
+          <main>
+            <UserImage/>
+            {//<UserStatisticsForm/>}
+  }         <UserForm
+              //newUser={this.newUser}
+            />
+            <HobbyForm
+              //newHobby={this.newHobby}
+            />
+          </main>
+        </div>
+      </ResponsiveEmbed>
     )
   }
 }

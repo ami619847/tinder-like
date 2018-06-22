@@ -7,6 +7,7 @@ import { likeIt, dislikeIt, findMatches } from '../actions/matches';
 import './DiscoverScreen.css';
 import like from '../images/Like-button.png';
 import dislike from '../images/Dislike-button.png';
+import { ResponsiveEmbed } from 'react-bootstrap';
 
 class DiscoverScreen extends React.PureComponent {
 
@@ -16,9 +17,10 @@ class DiscoverScreen extends React.PureComponent {
 
   render() {
     return(
-      <div>
+      <ResponsiveEmbed>
+       <div>
         <Menu />
-        <h3>Welcome {this.props.currentUser.userName}!</h3>
+        <h3>WELCOME {this.props.currentUser.userName}!</h3>
         <SwipeImage className="swiping" swipeOptions={{continuous: false}}>
           { this.props.currentUser.userMatches.allMatches.map(id=> this.props.users.userData[id]).map(user =>
           {return <div>
@@ -50,6 +52,7 @@ class DiscoverScreen extends React.PureComponent {
           )}
         </SwipeImage>
         </div>
+       </ResponsiveEmbed>
     )
   }
 }
