@@ -1,6 +1,11 @@
-/* .mainscreen-logo {
-  border-radius: 50%;
-} */
+.logo {
+  position: relative;
+}
+.container{
+  display: block;
+  position: relative;
+
+}
 
 .username {
     display: flex;

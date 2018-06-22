@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
-import { newHobby } from '../actions/users'
+import { newHobby, changeUser } from '../actions/users'
 import { withRouter } from 'react-router-dom'
+import { findMatches } from '../actions/matches';
 
 class HobbyForm extends PureComponent {
   handleChange = (event) => {
@@ -16,7 +17,19 @@ class HobbyForm extends PureComponent {
    const xp = this.state.experienceHobby
    const type = this.state.userType
    this.props.newHobby(hobby, xp, type)
-   this.props.history.push('./discover')
+
+    // console.log('currentUser in hobbyform', this.props.currentUserId)
+   //this.props.changeUser(this.props.users.find(user => user.userId === this.props.currentUserId))
+
+  }
+
+  submitButton = (event) => {
+    //console.log('userId in hobbyform', this.props.users.find(user => user.userId === this.props.currentUserId))
+    const findName = this.props.users.find(user => user.userId === this.props.currentUserId).userName
+    //console.log('findName', findName)
+    this.props.changeUser(findName)
+    this.props.findMatches()
+    this.props.history.push('./discover')
   }
 
   render() {
@@ -55,6 +68,7 @@ class HobbyForm extends PureComponent {
           <br/>
           <input type="submit" value="New Hobby"/>
         </form>
+        <button onClick={ this.submitButton }>Discover!</button>
       </div>
     )
   }
@@ -62,10 +76,11 @@ class HobbyForm extends PureComponent {
 
 const mapStateToProps = function (state) {
   return {
-    users: state.users.userData
+    users: state.users.userData,
+    currentUserId: state.users.currentUserId
 
   }
 }
-const mapDispatchToProps = { newHobby }
+const mapDispatchToProps = { newHobby, changeUser, findMatches }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HobbyForm))

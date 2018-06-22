@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { newUser, newHobby, changeUser } from '../actions/users'
 import { Link } from 'react-router-dom'
 import Menu from './Menu'
 import './DiscoverScreen.css'
@@ -12,7 +11,7 @@ class CurrentProfileScreen extends React.PureComponent {
     return(
       <div>
         <Menu />
-        <h3>Your page</h3>
+        <h3>Welcome {this.props.user.userName}!</h3>
 
           <div key={this.props.user.userId} className="container">
             <div className="pic">
@@ -45,9 +44,9 @@ class CurrentProfileScreen extends React.PureComponent {
 
 const mapStateToProps = function (state) {
   return {
-    user: state.users.currentUser,
+    user: state.users.currentUser
 
   }
 }
 
-export default connect(mapStateToProps, { newUser, newHobby, changeUser })(CurrentProfileScreen)
+export default connect(mapStateToProps)(CurrentProfileScreen)
