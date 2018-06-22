@@ -7,53 +7,56 @@ import { likeIt, dislikeIt } from '../actions/matches';
 import './DiscoverScreen.css';
 import like from '../images/Like-button.png';
 import dislike from '../images/Dislike-button.png';
+import { ResponsiveEmbed } from 'react-bootstrap';
 
 class DiscoverScreen extends React.PureComponent {
 
   render() {
     return(
-      <div>
-        <Menu />
-        <h3>Discover</h3>
+      <ResponsiveEmbed>
+        <div>
+          <Menu />
+          <h3>Discover</h3>
 
-          <SwipeImage className="swiping" swipeOptions={{continuous: false}}>
-            { this.props.otherusers.map(user =>
-            <div>
-              <div key={user.userId} className="container">
+            <SwipeImage className="swiping" swipeOptions={{continuous: false}}>
+              { this.props.otherusers.map(user =>
+              <div>
+                <div key={user.userId} className="container">
 
-                  <div className="pic">
-                    <img className="image" src={user.userPhoto}/>
-                  </div>
-                  <div className="name-box">
-                    <h2>
-                      {user.userName},
-                      <span className="age">{user.userAge}</span>
-                    </h2>
-                    <p>{user.userLocation}</p>
-                  </div>
+                    <div className="pic">
+                      <img className="image" src={user.userPhoto}/>
+                    </div>
+                    <div className="name-box">
+                      <h2>
+                        {user.userName},
+                        <span className="age">{user.userAge}</span>
+                      </h2>
+                      <p>{user.userLocation}</p>
+                    </div>
 
-                  <div className="info-hobby">
-                    {user.userHobby.typeHobby}: {user.userHobby.experienceHobby}, {user.userHobby.userType}
-                  </div>
-                  <br/>
+                    <div className="info-hobby">
+                      {user.userHobby.typeHobby}: {user.userHobby.experienceHobby}, {user.userHobby.userType}
+                    </div>
+                    <br/>
 
-                  <div className="info">
-                    <b>Short Description: </b>
-                      {user.userShortDescription}
-                  </div>
-                  <br/><br/><br/>
+                    <div className="info">
+                      <b>Short Description: </b>
+                        {user.userShortDescription}
+                    </div>
+                    <br/><br/><br/>
 
 
-                  <img src={like} alt="like-button" onClick={() => this.props.likeIt(user.userId)}/>
+                    <img src={like} alt="like-button" onClick={() => this.props.likeIt(user.userId)}/>
 
-                  <img src={dislike} alt="dislike-button" onClick={() => this.props.dislikeIt(user.userId)}/>
+                    <img src={dislike} alt="dislike-button" onClick={() => this.props.dislikeIt(user.userId)}/>
 
+                </div>
               </div>
-            </div>
-            )}
-          </SwipeImage>
+              )}
+            </SwipeImage>
 
-        </div>
+          </div>
+      </ResponsiveEmbed>
     )
   }
 }

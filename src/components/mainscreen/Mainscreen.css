@@ -1,11 +1,6 @@
-.logo {
-  position: relative;
-}
-.container{
-  display: block;
-  position: relative;
-
-}
+/* .mainscreen-logo {
+  border-radius: 50%;
+} */
 
 .username {
     display: flex;
@@ -36,7 +31,7 @@
 .login-button {
     background-color: #4CAF50;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     color: white;
     padding: 15px 32px;
     text-align: center;
