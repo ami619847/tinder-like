@@ -42,7 +42,9 @@ class DiscoverScreen extends React.PureComponent {
                 <br/>
                 <div className="info">
                   <b>Short Description: </b>
+                  <b>
                     {user.userShortDescription}
+                  </b>
                 </div>
                 <img className="dislike-button" src={dislike} onClick={() => {this.props.dislikeIt(user.userId)}}/>
                 <img className="like-button" src={like} onClick={() => {this.props.likeIt(user.userId)}}/>
