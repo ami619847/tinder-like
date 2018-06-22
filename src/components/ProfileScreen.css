@@ -14,18 +14,23 @@
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 10px;
+
+
 }
 
 label{
   color: #4CAF50;
   float: left;
+  width: 80%;
+  text-align: left;
 }
 
 input{
-  display: block;
+  display: inline-block;
   border-radius: 5px;
   padding: 5px 40px;
   width: 100%;
+  font-size: 20px;
 }
 
 .shortDescription{
@@ -44,10 +49,10 @@ input[type=submit]{
 .select{
   float: left;
   display: block;
-  /* height: 50px;*/
-  /* width: 200px; */
+  width: 100%;
+  font-size: 20px;
   margin-top: 5px;
-  border-radius: 5px;
+  text-align: left;
 }
 
 .hobbyForm{
@@ -58,4 +63,19 @@ input[type=submit]{
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+}
+
+.discover-button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 5px 40px;
 }

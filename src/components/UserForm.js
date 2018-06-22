@@ -28,13 +28,11 @@ class UserForm extends PureComponent {
       <div className="userForm">
 
         <form onSubmit={ this.handleSubmit }>
-          <label>
-            Name:
+          <label>Name:
             <input type="text" name="name" onChange={this.handleChange}/>
           </label>
           <br/>
-          <label>
-            Gender:
+          <label>Gender:
             <input type="text" name="gender" onChange={this.handleChange}/>
           </label>
           <br/>
