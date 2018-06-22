@@ -10,15 +10,19 @@ export default class Mainscreen extends PureComponent{
 
   render() {
     return (
-      <div className="mainscreen">
-        <body>
-          <img src={logo}/>
-          <UsernameForm />
-          <PasswordForm />
-          <br/>
-          <RegisterButton />
-        </body>
-      </div>
+
+        <div className="mainscreen">
+          <body>
+            <img src={logo} className="logo" alt="logo"/>
+            <div className="container">
+              <UsernameForm />
+              <PasswordForm />
+            </div>
+            <br/>
+            <RegisterButton />
+          </body>
+        </div>
+
     )
   }
 }

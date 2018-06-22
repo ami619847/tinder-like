@@ -5,7 +5,7 @@ import { newUser, newHobby, changeUser } from '../actions/users'
 import { Link } from 'react-router-dom'
 import { findMatches } from '../actions/matches';
 import discover from '../images/Discover-button.png';
-import profile from '../images/Profile-button-highlighted.png';
+import profile from '../images/Profile-button.png';
 import chat from '../images/Messaging-button.png';
 
 class Menu extends React.PureComponent {

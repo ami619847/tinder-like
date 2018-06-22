@@ -17,6 +17,10 @@ class UserForm extends PureComponent {
    const location = this.state.location
    const description = this.state.shortDescription
    this.props.newUser(name, gender, age, location, description)
+
+  //  setTimeout(() => {
+  //   this.props.changeUser(name)
+  // }, 5000)
   }
 
   render() {
