@@ -31,7 +31,7 @@ const makeNewUser = (state, action) => {
 // TODO: take out currentUser in this reducer and get it from userdata in places where you need it. If you have time. If not then so be it.
 
 function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.toLowerCase().slice(1);
+    return string.charAt().toUpperCase() + string.toLowerCase().slice(1);
 }
 
 const getCurrentUser = (currentUserId, users) => {
@@ -64,8 +64,8 @@ const reducer = (state = initialState, action = {}) => {
   case "CHANGE_USER":
     return {
       ...state,
-      currentUserId: userData.find(user => user.userName === capitalizeFirstLetter(action.payload.userName)).userId,
-      currentUser: userData.find(user => user.userName === capitalizeFirstLetter(action.payload.userName))
+      currentUserId: state.userData.find(user => user.userName === action.payload.userName).userId,
+      currentUser: state.userData.find(user => user.userName === action.payload.userName)
     }
   case "FIND_MATCHES":
     const allMatches = getMatches(getUsersWithSameHobby(state.userData, state.currentUser), state.currentUser)
