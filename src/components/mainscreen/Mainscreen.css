@@ -1,6 +1,16 @@
-/* .mainscreen-logo {
-  border-radius: 50%;
-} */
+.container {
+  display: block;
+}
+
+.username-password{
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.block{
+    display: block;
+}
 
 .username {
     display: flex;
@@ -11,8 +21,10 @@
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding-left: 40px;
-    padding: 15px 32px;
+    padding: 15px 40px;
     font-size: 16px;
+    margin: auto;
+    width: 100%;
 }
 
 .password {
@@ -24,8 +36,10 @@
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding-left: 40px;
-    padding: 15px 32px;
+    width: 100%;
+    padding: 15px 40px;
     font-size: 16px;
+    margin: auto;
 }
 
 .login-button {
@@ -33,7 +47,7 @@
     border: none;
     border-radius: 50px;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -46,9 +60,11 @@
     background-color: white;
     border: none;
     color: #4CAF50;
-    padding: 15px 32px;
+    padding: 15px 10px;
     text-align: center;
     font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
+    width: 100%;
+
 }
