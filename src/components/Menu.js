@@ -11,22 +11,7 @@ import chat from '../images/Messaging-button.png';
 class Menu extends React.PureComponent {
 
   componentDidMount() {
-    //this.props.newUser('alex', 'female', 28, 'amsterdam', 'sexy girl') //adding new user
-    //this.props.newUser('jelle', 'male', 32, 'haarlem', 'batman fanboy') //adding new user
-     //changing the active user. should be linked to login page-logic
-
-    // this.props.changeUser('rick')
-    // this.props.findMatches()
-
-    // this.props.changeUser('rick')
-
-  //  this.props.changeUser('rick')
-
     this.props.findMatches()
-
-    // this.props.findMatches()
-
-
   }
 
   render() {
