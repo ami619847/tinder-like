@@ -14,7 +14,7 @@ class CurrentProfileScreen extends React.PureComponent {
       <ResponsiveEmbed>
         <div>
           <Menu />
-          <h3>Your page</h3>
+          <h3>YOUR ACCOUNT</h3>
 
             <div key={this.props.user.userId} className="container">
               <div className="pic">

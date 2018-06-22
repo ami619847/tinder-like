@@ -14,7 +14,7 @@ export default class ProfileScreen extends React.PureComponent {
       <ResponsiveEmbed>
         <div>
           <Menu />
-          <h3>Create Profile</h3>
+          <h3>CREATE ACCOUNT</h3>
           <main>
             <UserImage/>
             {//<UserStatisticsForm/>}

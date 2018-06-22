@@ -69,6 +69,11 @@
     height:100px; */
 }
 
+h3 {
+  color: grey;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 h2 {
   padding-top: -0px;
   padding-left: 20px;
