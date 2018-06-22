@@ -1,35 +1,60 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.chatroom{
+
 }
-body {
-    font-family: "Press Start 2P";
+
+.matches{
+  border: 2px solid green;
+  height: 30%;
+  width: 80%;
+  min-height:120px;
+  border-radius: 50px;
+  margin:auto;
+  display:flex;
+
+  color:green;
+  font-weight: bold;
 }
-#container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: "sidebar main";
-    width: 100vw;
-    height: 100vh;
+.matchtext{
+  color:green;
+  font-weight: bold;
+  width:60%;
+  margin:auto;
+  display:inline-block;
 }
-#main {
-    grid-area: main;
+.icimages{
+  justify-content: space-evenly;
+
+  margin:auto;
+  max-height:80px;
+  max-width:80px;
+  min-height:80px;
+  min-width:80px;
+  border-radius: 40px;
+  background-color: white;
+  border: 2px solid green;
 }
-#new-message {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 5px;
-    margin-left: 0px;
-    border-top: 1px solid #3f3f3f;
+.Cicimages{
+  margin-top:auto;
+  margin-bottom: auto;
+  margin-left: 20px;
 }
-#messages-list {
-    padding: 5px 0 0 5px;
+.ctext{
+  margin-top:auto;
+  margin-bottom: auto;
+  margin-left: 100px;
+
 }
-#sidebar {
-    grid-area: sidebar;
-    padding: 5px 0 0 5px;
-    border-right: 1px solid #3f3f3f;
-    height: 100%;
+.Chats{
+  margin-top: 10px;
+}
+.messages{
+  color:green;
+  font-weight: bold;
+  border: 2px solid green;
+  height: 30%;
+  width: 80%;
+  min-height:600px;
+  border-radius: 50px;
+  margin:auto;
+  margin-top:50px;
 }
