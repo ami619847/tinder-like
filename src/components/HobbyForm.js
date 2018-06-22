@@ -68,7 +68,7 @@ class HobbyForm extends PureComponent {
           <br/>
           <input type="submit" value="New Hobby"/>
         </form>
-        <button onClick={ this.submitButton }>Discover!</button>
+        <button className="discover-button" onClick={ this.submitButton }>Let's starts discovering!</button>
       </div>
     )
   }

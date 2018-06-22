@@ -20,7 +20,7 @@ class DiscoverScreen extends React.PureComponent {
       <ResponsiveEmbed>
        <div>
         <Menu />
-        <h3>WELCOME {this.props.currentUser.userName}!</h3>
+        <h3>Welcome {this.props.currentUser.userName}!</h3>
         <SwipeImage className="swiping" swipeOptions={{continuous: false}}>
           { this.props.currentUser.userMatches.allMatches.map(id=> this.props.users.userData[id]).map(user =>
           {return <div>

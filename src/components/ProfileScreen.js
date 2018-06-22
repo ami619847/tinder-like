@@ -16,7 +16,7 @@ export default class ProfileScreen extends React.PureComponent {
           <Menu />
           <h3>CREATE ACCOUNT</h3>
           <main>
-            <UserImage/>
+
             {//<UserStatisticsForm/>}
   }         <UserForm
               //newUser={this.newUser}
