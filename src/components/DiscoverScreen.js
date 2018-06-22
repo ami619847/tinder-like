@@ -15,7 +15,6 @@ class DiscoverScreen extends React.PureComponent {
   }
 
   render() {
-    console.log(this.props.currentUser)
     return(
       <div>
         <Menu />

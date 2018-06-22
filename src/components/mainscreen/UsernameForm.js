@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { changeUser } from '../../actions/users'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
+import { findMatches } from '../../actions/matches';
 
 class UsernameForm extends PureComponent {
   state = {username:''}
@@ -11,6 +12,7 @@ class UsernameForm extends PureComponent {
     event.preventDefault()
     const inputName = this.state.username
     this.props.changeUser(inputName)
+    this.props.findMatches()
     this.props.history.push('./discover')
   }
 
@@ -48,6 +50,6 @@ const mapStateToProps = function (state) {
     users: state.users.userData
   }
 }
-const mapDispatchToProps = { changeUser }
+const mapDispatchToProps = { changeUser, findMatches }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(UsernameForm))
