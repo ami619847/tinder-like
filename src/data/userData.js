@@ -199,7 +199,7 @@ const userData = [
         userHobby: {
           typeHobby: "basketball",
           experienceHobby: "experienced", //radiobutton with 3 choices: beginner, intermediate, experienced
-          userType: "learn" //radiobutton with 3 choices: teach, learn, practice
+          userType: "teach" //radiobutton with 3 choices: teach, learn, practice
         },
         userMatches: {
           allMatches: [],//refs to userIds
